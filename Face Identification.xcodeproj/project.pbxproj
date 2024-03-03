@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C62059982B93A57100234B79 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62059972B93A57100234B79 /* Detector.swift */; };
+		C620599D2B93B0F600234B79 /* YOLOv3TinyInt8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C620599C2B93B0F600234B79 /* YOLOv3TinyInt8LUT.mlmodel */; };
 		C6EB54562B8BF45900750134 /* Face_IdentificationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB54552B8BF45900750134 /* Face_IdentificationApp.swift */; };
 		C6EB54582B8BF45900750134 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB54572B8BF45900750134 /* ContentView.swift */; };
 		C6EB545A2B8BF45A00750134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6EB54592B8BF45A00750134 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C62059972B93A57100234B79 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		C620599C2B93B0F600234B79 /* YOLOv3TinyInt8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3TinyInt8LUT.mlmodel; sourceTree = "<group>"; };
 		C6EB54522B8BF45900750134 /* Face Identification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Identification.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6EB54552B8BF45900750134 /* Face_IdentificationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face_IdentificationApp.swift; sourceTree = "<group>"; };
 		C6EB54572B8BF45900750134 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C620598D2B93A0FE00234B79 /* Camera Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C6EB54672B8BF85300750134 /* CameraServiceViewController.swift */,
+			);
+			path = "Camera Tools";
+			sourceTree = "<group>";
+		};
 		C6EB54492B8BF45900750134 = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +65,11 @@
 		C6EB54542B8BF45900750134 /* Face Identification */ = {
 			isa = PBXGroup;
 			children = (
+				C620599C2B93B0F600234B79 /* YOLOv3TinyInt8LUT.mlmodel */,
 				C6EB54552B8BF45900750134 /* Face_IdentificationApp.swift */,
 				C6EB54572B8BF45900750134 /* ContentView.swift */,
-				C6EB54672B8BF85300750134 /* CameraServiceViewController.swift */,
+				C62059972B93A57100234B79 /* Detector.swift */,
+				C620598D2B93A0FE00234B79 /* Camera Tools */,
 				C6EB54592B8BF45A00750134 /* Assets.xcassets */,
 				C6EB545B2B8BF45A00750134 /* Preview Content */,
 			);
@@ -141,8 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6EB54582B8BF45900750134 /* ContentView.swift in Sources */,
+				C620599D2B93B0F600234B79 /* YOLOv3TinyInt8LUT.mlmodel in Sources */,
 				C6EB54562B8BF45900750134 /* Face_IdentificationApp.swift in Sources */,
 				C6EB54682B8BF85300750134 /* CameraServiceViewController.swift in Sources */,
+				C62059982B93A57100234B79 /* Detector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
