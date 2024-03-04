@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "1F8A181B-90C3-4511-80D8-9C8165AF957A": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "994AAFD2-52BA-46E8-A17F-4F41DA715291": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "YOLOv3TinyInt8LUT.mlmodel",
+            "path": "com.apple.CoreML/YOLOv3TinyInt8LUT.mlmodel"
+        },
+        "C6DE52F7-9FFD-481D-9CED-214491E801F5": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        }
+    },
+    "rootModelIdentifier": "994AAFD2-52BA-46E8-A17F-4F41DA715291"
+}

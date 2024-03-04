@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IV</key>
+	<data>
+	nikcI2/m1ddu+QM1DmAHGQ==
+	</data>
+	<key>Key</key>
+	<data>
+	E0t3PSc54VF6tDHMrNQW2Q==
+	</data>
+	<key>KeyIdentifier</key>
+	<string>7DD81082-EF14-4737-9275-1C52C1525867</string>
+	<key>UsesCodeSigningIdentityForEncryption</key>
+	<false/>
+	<key>Version</key>
+	<integer>1</integer>
+</dict>
+</plist>

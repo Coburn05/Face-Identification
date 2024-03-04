@@ -16,6 +16,7 @@ extension CameraServiceViewController {
         do {
             let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelURL!))
             let recognitions = VNCoreMLRequest(model: visionModel, completionHandler: detectionDidComplete)
+            recognitions.imageCropAndScaleOption = .scaleFill
             self.requests = [recognitions]
         } catch let error {
             print(error)
@@ -48,16 +49,16 @@ extension CameraServiceViewController {
         
         for observation in results where observation is VNRecognizedObjectObservation {
             guard let objectObservation = observation as? VNRecognizedObjectObservation else { continue }
-            
+            print((observation.description) + " " + "\(observation.confidence)")
             // coordinate transformations
             let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(screenRect.size.width), Int(screenRect.size.height))
             let transformedBounds = CGRect(
                 x: objectBounds.minX,
-                y: screenRect.size.height - objectBounds.maxY,
+                y: screenRect.size.height - objectBounds.minY,
                 width: objectBounds.maxX - objectBounds.minX,
                 height: objectBounds.maxY - objectBounds.minY
             )
-
+            //print("bounds \(transformedBounds)")
             
             let boxLayer = self.drawBoundingBox(transformedBounds)
             detectionLayer.addSublayer(boxLayer)
@@ -65,12 +66,18 @@ extension CameraServiceViewController {
     }
     
     func drawBoundingBox(_ bounds: CGRect) -> CALayer {
+        //print("drawing \(bounds)")
         let boxLayer = CALayer()
         boxLayer.frame = bounds
         boxLayer.borderWidth = 3.0
-        boxLayer.borderColor = CGColor.init(red: 7.0, green: 8.0, blue: 7.0, alpha: 1.0)
+        boxLayer.borderColor = CGColor.init(red: 1, green: 1, blue: 1, alpha: 1.0)
         boxLayer.cornerRadius = 4
         return boxLayer
+    }
+    
+    func addPoint() {
+        let layer = CALayer()
+        //layer.frame = (282.50244140625, -8.0361328125, 106.0693359375, 451.259765625)
     }
     
     func detectionDidComplete(request: VNRequest, error: Error?) {

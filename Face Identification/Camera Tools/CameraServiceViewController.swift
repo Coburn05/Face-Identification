@@ -31,11 +31,12 @@ class CameraServiceViewController: UIViewController, AVCaptureVideoDataOutputSam
     
     override func viewDidLoad() {
         checkPermission()
-        
+
         sessionQueue.async {
             guard self.permissionGranted else {
                 return
             }
+            
             self.setupCaptureSession()
             self.setupLayers()
             self.setupDetector()
@@ -73,7 +74,7 @@ class CameraServiceViewController: UIViewController, AVCaptureVideoDataOutputSam
         videoOutput.connection(with: .video)?.videoRotationAngle = 90
         
         // access for camera
-        guard let videoDevice = AVCaptureDevice.default(.builtInDualWideCamera, for: .video, position: .back) else { return }
+        guard let videoDevice = AVCaptureDevice.default(.builtInUltraWideCamera, for: .video, position: .back) else { return }
         guard let videoDeviceIn = try? AVCaptureDeviceInput(device: videoDevice) else { return }
         
         guard captureSession.canAddInput(videoDeviceIn) else { return } 
